@@ -1,0 +1,23 @@
+{
+  "parent": "jojomod:root",
+  "display": {
+    "icon": {
+      "id": "minecraft:sunflower"
+    },
+    "title": {
+      "translate": "advancement.jojomod.steel_ball_run.title"
+    },
+    "description": {
+      "translate": "advancement.jojomod.steel_ball_run.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

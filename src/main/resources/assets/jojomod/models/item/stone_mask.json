@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": { "layer0": "jojomod:item/stone_mask" },
+  "display": {
+    "head": { "rotation": [0, 180, 0], "translation": [0, 13, 7.5], "scale": [1.05, 1.05, 1.05] }
+  }
+}

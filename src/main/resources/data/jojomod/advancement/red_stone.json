@@ -1,0 +1,23 @@
+{
+  "parent": "jojomod:root",
+  "display": {
+    "icon": {
+      "id": "jojomod:red_stone_of_aja"
+    },
+    "title": {
+      "translate": "advancement.jojomod.red_stone.title"
+    },
+    "description": {
+      "translate": "advancement.jojomod.red_stone.desc"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "parent": "jojomod:root",
+  "display": {
+    "icon": {
+      "id": "minecraft:glowstone_dust"
+    },
+    "title": {
+      "translate": "advancement.jojomod.battle_tendency.title"
+    },
+    "description": {
+      "translate": "advancement.jojomod.battle_tendency.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

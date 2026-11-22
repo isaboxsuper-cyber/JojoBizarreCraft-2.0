@@ -1,0 +1,23 @@
+{
+  "parent": "jojomod:root",
+  "display": {
+    "icon": {
+      "id": "minecraft:clock"
+    },
+    "title": {
+      "translate": "advancement.jojomod.stone_ocean.title"
+    },
+    "description": {
+      "translate": "advancement.jojomod.stone_ocean.desc"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

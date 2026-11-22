@@ -1,0 +1,23 @@
+{
+  "parent": "jojomod:root",
+  "display": {
+    "icon": {
+      "id": "minecraft:tnt"
+    },
+    "title": {
+      "translate": "advancement.jojomod.bites_the_dust.title"
+    },
+    "description": {
+      "translate": "advancement.jojomod.bites_the_dust.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "jojomod:rokakaka",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "jojomod:rokakaka_bush",
+              "properties": { "age": "3" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
