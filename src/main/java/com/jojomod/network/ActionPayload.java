@@ -10,13 +10,13 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 
-/** Cliente -> servidor. type: 0 = stand on/off, 1 = usar habilidade (arg = id), 2 = forma vampiro on/off, 3 = comprar no/arvore (arg = id) */
-public record ActionPayload(int type, String arg) implements CustomPacketPayload {
+/** Cliente -> servidor. kind: 0 = stand on/off, 1 = usar habilidade (arg = id), 2 = forma vampiro on/off, 3 = comprar no/arvore (arg = id) */
+public record ActionPayload(int kind, String arg) implements CustomPacketPayload {
     public static final CustomPacketPayload.Type<ActionPayload> TYPE =
             new CustomPacketPayload.Type<>(ResourceLocation.fromNamespaceAndPath(JojoMod.MOD_ID, "action"));
 
     public static final StreamCodec<ByteBuf, ActionPayload> CODEC = StreamCodec.composite(
-            ByteBufCodecs.VAR_INT, ActionPayload::type,
+            ByteBufCodecs.VAR_INT, ActionPayload::kind,
             ByteBufCodecs.STRING_UTF8, ActionPayload::arg,
             ActionPayload::new);
 
@@ -28,7 +28,7 @@ public record ActionPayload(int type, String arg) implements CustomPacketPayload
     public static void handle(ActionPayload payload, IPayloadContext ctx) {
         ctx.enqueueWork(() -> {
             if (ctx.player() instanceof ServerPlayer sp) {
-                AbilityHandler.handle(sp, payload.type(), payload.arg());
+                AbilityHandler.handle(sp, payload.kind(), payload.arg());
             }
         });
     }
